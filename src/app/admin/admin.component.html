@@ -1,16 +1,144 @@
+<!-- <div class="container"> -->
 <div class="sideNav">
-  <h6 >Sidenav </h6>
-  <h6 style="padding-left:10%; padding-top:10%"><i class="fa fa-signal" aria-hidden="true" style="color: blue"></i> @nbsp; Analytics</h6>
-  <p >Dashboard</p>
-  <p >State</p>
+  <h6>Eynos angular exercise</h6>
+  <h6 style="padding-left:10%; padding-top:10%"><i class="fa fa-signal" aria-hidden="true" style="color: blue"></i>
+    &nbsp; Analytics</h6>
+  <p id="list">Dashboard</p>
+  <p id="list">State</p>
   <div style="background-color: white; height: 37px ;border-left-style: solid;border-width: 5px;
   border-color: blue">
-  <p style="padding-top:2%; color: blue">Advertising</p>
+    <p id="list" style="padding-top:2%; color: blue">Advertising</p>
+  </div>
+  <h6 style="padding-left:10%; padding-top:6%"><i class="fa fa-briefcase" aria-hidden="true" style="color: blue"></i>
+    &nbsp; Setup</h6>
+  <p id="list">Customisation</p>
+  <p id="list">Integration</p>
+  <p id="list">Add domain</p>
+  <h6 style="padding-left:10%; padding-top:2%"><i class="fa fa-bell" aria-hidden="true" style="color: blue"></i>
+    &nbsp; Notification</h6>
+  <h6 style="padding-left:10%; padding-top:2%"><i class="fa fa-outdent" aria-hidden="true" style="color: blue"></i>
+    &nbsp; Logout</h6>
+    <img src="assets/Barack-Obama.jpg">
+    <h6 style="margin-left:18%;margin-top:10%">Barack Obama</h6>
+    <p class="ml-4">obamab@gmail.com</p>
+    <p style="color: green; " class="ml-1">Your current plan : Standard</p>
+    <button type="button" class="btn btn-success ml-4" >Upgrade your plan</button>
 </div>
-  <h6 style="padding-left:10%; padding-top:6%"><i class="fa fa-briefcase" aria-hidden="true" style="color: blue"></i>  Setup</h6>
-  <p >Customisation</p>
-  <p >Integration</p>
-  <p >Add domain</p>
-  <h6 style="padding-left:10%; padding-top:2%"><i class="fa fa-bell" aria-hidden="true" style="color: blue"></i>  Notification</h6>
-  <h6 style="padding-left:10%; padding-top:2%"><i class="fa fa-outdent" aria-hidden="true" style="color: blue"></i>  Logout</h6>
+<div class="content">
+  <div class="row" style="margin-top:-800px">
+    <h5 style="margin-left:1%">Stat</h5>
+    <my-date-picker [options]="myDatePickerOptions" (dateChanged)="onDateChanged($event)"
+      style="margin-left:56%; width:15%"></my-date-picker>
+    &nbsp; <my-date-picker [options]="myDatePickerOptions" (dateChanged)="onDateChanged($event)" style="width:15%">
+    </my-date-picker>&nbsp;
+    <div class="dropdown">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+        Custom
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div style=" width: 50%; height: 100%;">
+      <h5 style="padding:1%">Fraud thread score</h5>
+    </div>
+    <div style=" margin-left: 50%;margin-top: -3%; height: 100%;">
+      <h5>Blocked Fraud type</h5>
+      <div id="progressGroup">
+        <p>Known Fraud Ip</p>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25"
+            aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+      <div id="progressGroup">
+
+        <p>Fradulat device</p>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="25"
+            aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+      <div id="progressGroup">
+
+        <p>Manually blocked</p>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 35%" aria-valuenow="25"
+            aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+      <div id="progressGroup">
+
+        <p>Exclusive IP list</p>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 15%" aria-valuenow="25"
+            aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+      <div id="progressGroup">
+
+        <p>Excessive click</p>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="25"
+            aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+      <div id="progressGroup"><b>VPN</b> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;Not enabled &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+          href="">Go to setting</a></div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:2%">
+
+    <p style="padding-top:1%; margin-left:2%">Details</p>
+    <div class="row" style="margin-left:1%"> <button type="button" class="btn btn-light">Fraud score 5 and greater
+        &nbsp;&nbsp; x</button> &nbsp;&nbsp;<button type="button" class="btn btn-light">Country Russia &nbsp;&nbsp;
+        x</button> &nbsp;&nbsp; <button type="button" class="btn btn-light">Light &nbsp;&nbsp; x</button> <button
+        type="button" class="btn btn-light">Ad platforms: Google ads &nbsp;&nbsp; x</button>  <button type="button" class="btn btn-light"><i class="fa fa-sliders" aria-hidden="true"></i> &nbsp;&nbsp;Add filters</button></div>
+        <table class="table table-borderless">
+            <thead>
+              <tr>
+                <th scope="col">IP Address</th>
+                <th scope="col">Fraud score</th>
+                <th scope="col">Status</th>
+                <th scope="col">Clicks</th>
+                <th scope="col">First clicks</th>
+                <th scope="col">Country</th>
+                <th scope="col">ISP</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">18.33.44.55</th>
+                <td>4.5</td>
+                <td><label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                  </label></td>
+                <td>12.2.12</td>
+                <td>22.3.15</td>
+                <td>Russia</td>
+                <td>12.3.33</td>
+              </tr>
+              <tr>
+                  <th scope="row">18.33.44.55</th>
+                  <td>4.5</td>
+                  <td><label class="switch">
+                      <input type="checkbox" >
+                      <span class="slider round"></span>
+                    </label></td>
+                  <td>12.2.12</td>
+                  <td>22.3.15</td>
+                  <td>Russia</td>
+                  <td>12.3.33</td>
+                </tr>
+            </tbody>
+          </table>
+      </div>
+  
 </div>
+
+<!-- </div> -->
